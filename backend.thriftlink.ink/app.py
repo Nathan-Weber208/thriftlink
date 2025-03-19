@@ -41,6 +41,33 @@ def authorize_user(email: str, password: str):
 def hello():
     return "Hello from Flask on backend.thriftlink.ink!"
 
+@app.route("/login", methods=["POST"])
+def login():
+    """
+    Authenticate a user.
+    Expects JSON:
+      {
+        "email": "...",
+        "password": "..."
+      }
+    Returns:
+      200 with user_id if successful
+      401 Unauthorized if invalid credentials
+    """
+    data = request.get_json()
+    email = data.get("email")
+    password = data.get("password")
+
+    # Basic validation
+    if not email or not password:
+        return jsonify({"error": "Missing required fields"}), 400
+
+    user_id = authorize_user(email, password)
+    if user_id:
+        return jsonify({"user_id": user_id}), 200
+    else:
+        return jsonify({"error": "Unauthorized"}), 401
+
 
 @app.route("/createUser", methods=["POST"])
 def create_user():

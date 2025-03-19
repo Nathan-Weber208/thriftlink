@@ -1,0 +1,198 @@
+/* Ensure header is at the top and aligned properly */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 10px 15px;
+    z-index: 1000;
+    height: 175px; /* Fixed height */
+}
+
+/* Make the logo pop at the top-left */
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* POPPING Refresh Button */
+#refreshBtn {
+    background: yellow;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+#refreshBtn:hover {
+    background: orange;
+    transform: scale(1.1);
+}
+
+/* Compact login form positioned in the top-right */
+.login-form {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+/* Super compact input fields */
+.login-form .form-control {
+    width: 110px;
+    font-size: 0.75rem;
+    padding: 2px 5px;
+    height: 22px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Compact login button */
+.login-form .btn {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    height: 22px;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 70px; /* Fixed width */
+}
+
+/* Green success checkmark */
+#successCheck {
+    font-size: 1rem;
+    color: #28a745; /* Green */
+    font-weight: bold;
+}
+
+/* Hide new user form initially */
+#createUserForm {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Compact inputs for user creation */
+#createUserForm input {
+    font-size: 0.75rem;
+    padding: 2px 5px;
+    height: 22px;
+}
+
+/* Smallest possible button for creating user */
+#createUserForm button {
+    font-size: 0.75rem;
+    padding: 2px;
+    height: 22px;
+}
+
+/* Reduce spacing for 'New User?' link */
+.text-center.mt-3 {
+    margin-top: 2px !important;
+    font-size: 0.7rem;
+}
+
+/* Keep listings below header */
+/* Ensure listings container has enough space */
+main {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Ensure the body doesn't hide under the header */
+body {
+    padding-top: 175px; /* Push content down to make space for header */
+    background-color: #616c77;
+}
+
+.course-row {
+    background-color: white;
+}
+
+
+
+
+
+/* POPPING Refresh Button */
+#refreshBtn {
+    background: #f8f9fa; /* Bright yellow */
+    color: #000; /* Black text/icon */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+#refreshBtn:hover {
+    background: #ffa500; /* Bright orange */
+    transform: scale(1.1);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Click (Active) Effect */
+#refreshBtn:active {
+    background: #ff8800;
+    transform: scale(0.95);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Refresh Icon Styling */
+#refreshIcon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate animation on hover */
+#refreshBtn:hover #refreshIcon {
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+/* listings */
+
+/* Card styling for listings */
+.card {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure images don't overflow */
+.card img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
